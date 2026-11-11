@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="3bb2d1a968a51d96"><![CDATA[
+{
+  "version": 1,
+  "title": "Handing work between the CLI and the cloud agent",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "Handoffs: the terminal and the cloud agent",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "Send a long task to the cloud from the terminal, and pull a cloud session back when you want to steer it.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "term",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 200.0,
+      "w": 270.0,
+      "h": 150.0,
+      "text": "Copilot CLI\nin your terminal\nyour machine, your files",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cloud",
+      "kind": "rect",
+      "x": 698.0,
+      "y": 200.0,
+      "w": 270.0,
+      "h": 150.0,
+      "text": "Copilot cloud agent\nworks in the background,\nopens a draft pull request,\nand requests your review",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "takeaway",
+      "x": 40.0,
+      "y": 500.0,
+      "text": "/delegate offers to commit your unstaged work to a new branch first, so the cloud agent starts where you stopped.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "outlabel",
+      "x": 469.365,
+      "y": 244.0,
+      "text": "send it out",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "backlabel",
+      "x": 462.8175,
+      "y": 380.0,
+      "text": "bring it back",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "out",
+      "from": "term",
+      "to": "cloud",
+      "route": "straight",
+      "label": "/delegate <prompt>, or & <prompt>",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "back",
+      "from": "cloud",
+      "to": "term",
+      "from_side": "bottom",
+      "to_side": "bottom",
+      "label": "“Continue in Copilot CLI” on the web, or --resume=<task-id>",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="out"><path d="M310 275L689 275" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M698 275L688 279L688 271Z" fill="#6b6a66"/><rect x="359.57" y="262.88" width="279.85" height="24.25" rx="2" fill="#ffffff"/><text x="499.5" y="281.38" font-family="IBM Plex Sans" font-size="17" fill="#1a1a1a" text-anchor="middle"><tspan x="499.5" dy="0">/delegate &lt;prompt&gt;, or &amp; &lt;prompt&gt;</tspan></text></g>
+<g id="back"><path d="M833 350L833 366L175 366L175 359" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M175 350L179 360L171 360Z" fill="#6b6a66"/><rect x="274.88" y="353.88" width="467.24" height="24.25" rx="2" fill="#ffffff"/><text x="508.5" y="372.38" font-family="IBM Plex Sans" font-size="17" fill="#1a1a1a" text-anchor="middle"><tspan x="508.5" dy="0">“Continue in Copilot CLI” on the web, or --resume=&lt;task-id&gt;</tspan></text></g>
+<g id="title"><text x="321.72" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="321.72" dy="0">Handoffs: the terminal and the cloud agent</tspan></text></g>
+<g id="subtitle"><text x="410.82" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="410.82" dy="0">Send a long task to the cloud from the terminal, and pull a cloud session back when you want to steer it.</tspan></text></g>
+<g id="term"><path d="M40 200H310V350H40Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="175" y="260.13" font-family="IBM Plex Sans" font-size="17" fill="#10386b" text-anchor="middle"><tspan x="175" dy="0">Copilot CLI</tspan><tspan x="175" dy="21.25">in your terminal</tspan><tspan x="175" dy="21.25">your machine, your files</tspan></text></g>
+<g id="cloud"><path d="M698 200H968V350H698Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="833" y="249.5" font-family="IBM Plex Sans" font-size="17" fill="#7a2f0f" text-anchor="middle"><tspan x="833" dy="0">Copilot cloud agent</tspan><tspan x="833" dy="21.25">works in the background,</tspan><tspan x="833" dy="21.25">opens a draft pull request,</tspan><tspan x="833" dy="21.25">and requests your review</tspan></text></g>
+<g id="takeaway"><text x="438.74" y="516" font-family="IBM Plex Sans" font-size="16" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="438.74" dy="0">/delegate offers to commit your unstaged work to a new branch first, so the cloud agent starts where you stopped.</tspan></text></g>
+<g id="outlabel"><text x="504" y="259" font-family="IBM Plex Sans" font-size="15" font-style="italic" fill="#6b6a66" text-anchor="middle"><tspan x="504" dy="0">send it out</tspan></text></g>
+<g id="backlabel"><text x="504" y="395" font-family="IBM Plex Sans" font-size="15" font-style="italic" fill="#6b6a66" text-anchor="middle"><tspan x="504" dy="0">bring it back</tspan></text></g>
+</g>
+</svg>

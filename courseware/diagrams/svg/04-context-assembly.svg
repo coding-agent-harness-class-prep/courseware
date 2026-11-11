@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="15a9ad3c390f1f79"><![CDATA[
+{
+  "version": 1,
+  "title": "What goes into one request",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "Context assembly: what goes into one request",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "Before every model call, the harness packs these pieces into a single request.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "req",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 110.0,
+      "w": 640.0,
+      "h": 370.0,
+      "text": "",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": 2.0,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 12.0,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "reqlabel",
+      "x": 60.0,
+      "y": 120.0,
+      "text": "One request",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r1",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 155.0,
+      "w": 600.0,
+      "h": 56.0,
+      "text": "Instruction files\n.github/copilot-instructions.md · *.instructions.md (applyTo) · AGENTS.md",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": "left",
+        "padding": 14.0
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r2",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 219.0,
+      "w": 600.0,
+      "h": 56.0,
+      "text": "Attached context\n#file · the editor selection · #codebase",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": "left",
+        "padding": 14.0
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r3",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 283.0,
+      "w": 600.0,
+      "h": 56.0,
+      "text": "Tool results\nfile reads · search hits · terminal and test output",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": "left",
+        "padding": 14.0
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r4",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 347.0,
+      "w": 600.0,
+      "h": 56.0,
+      "text": "Conversation history\nearlier turns in this session",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": "left",
+        "padding": 14.0
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r5",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 411.0,
+      "w": 600.0,
+      "h": 56.0,
+      "text": "Your prompt\nwhat you just asked for",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": "left",
+        "padding": 14.0
+      }
+    },
+    {
+      "type": "shape",
+      "id": "model",
+      "kind": "rect",
+      "x": 830.0,
+      "y": 245.0,
+      "w": 140.0,
+      "h": 100.0,
+      "text": "Model\n(LLM)",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "takeaway",
+      "x": 40.0,
+      "y": 530.0,
+      "text": "If something isn't in the request, the model doesn't know it. Instruction files make sure the basics always are.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c1",
+      "from": "req",
+      "to": "model",
+      "route": "straight",
+      "label": "every turn",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="c1"><path d="M680 295L821 295" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M830 295L820 299L820 291Z" fill="#6b6a66"/><rect x="715.72" y="284.75" width="69.56" height="20.5" rx="2" fill="#ffffff"/><text x="750.5" y="300.25" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="750.5" dy="0">every turn</tspan></text></g>
+<g id="title"><text x="342.43" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="342.43" dy="0">Context assembly: what goes into one request</tspan></text></g>
+<g id="subtitle"><text x="317.2" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="317.2" dy="0">Before every model call, the harness packs these pieces into a single request.</tspan></text></g>
+<g id="req"><path d="M52 110H668A12 12 0 0 1 680 122V468A12 12 0 0 1 668 480H52A12 12 0 0 1 40 468V122A12 12 0 0 1 52 110Z" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/></g>
+<g id="reqlabel"><text x="111.43" y="138" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="111.43" dy="0">One request</tspan></text></g>
+<g id="r1"><path d="M60 155H660V211H60Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="74" y="179" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="start"><tspan x="74" dy="0">Instruction files</tspan><tspan x="74" dy="20">.github/copilot-instructions.md · *.instructions.md (applyTo) · AGENTS.md</tspan></text></g>
+<g id="r2"><path d="M60 219H660V275H60Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="74" y="243" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="start"><tspan x="74" dy="0">Attached context</tspan><tspan x="74" dy="20">#file · the editor selection · #codebase</tspan></text></g>
+<g id="r3"><path d="M60 283H660V339H60Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="74" y="307" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="start"><tspan x="74" dy="0">Tool results</tspan><tspan x="74" dy="20">file reads · search hits · terminal and test output</tspan></text></g>
+<g id="r4"><path d="M60 347H660V403H60Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="74" y="371" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="start"><tspan x="74" dy="0">Conversation history</tspan><tspan x="74" dy="20">earlier turns in this session</tspan></text></g>
+<g id="r5"><path d="M60 411H660V467H60Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="74" y="435" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="start"><tspan x="74" dy="0">Your prompt</tspan><tspan x="74" dy="20">what you just asked for</tspan></text></g>
+<g id="model"><path d="M830 245H970V345H830Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="900" y="290.5" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="900" dy="0">Model</tspan><tspan x="900" dy="22.5">(LLM)</tspan></text></g>
+<g id="takeaway"><text x="422.2" y="546" font-family="IBM Plex Sans" font-size="16" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="422.2" dy="0">If something isn't in the request, the model doesn't know it. Instruction files make sure the basics always are.</tspan></text></g>
+</g>
+</svg>

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="669f8cadb50829e3"><![CDATA[
+{
+  "version": 1,
+  "title": "MCP architecture",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "MCP: adding tools from outside the harness",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "An MCP server publishes tools; the harness's MCP client lists them and calls them for the agent.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "harness",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 120.0,
+      "w": 340.0,
+      "h": 360.0,
+      "text": "",
+      "style": {
+        "fill": "none",
+        "stroke": "#2a78d6",
+        "stroke_width": 2.0,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 12.0,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "hlabel",
+      "x": 58.0,
+      "y": 132.0,
+      "text": "Copilot harness",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "agent",
+      "kind": "rect",
+      "x": 70.0,
+      "y": 175.0,
+      "w": 280.0,
+      "h": 85.0,
+      "text": "Agent\npicks the tool it needs",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "client",
+      "kind": "rect",
+      "x": 70.0,
+      "y": 350.0,
+      "w": 280.0,
+      "h": 95.0,
+      "text": "MCP client\nlists each server's tools\nand calls them",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "gh",
+      "kind": "rect",
+      "x": 520.0,
+      "y": 160.0,
+      "w": 240.0,
+      "h": 100.0,
+      "text": "GitHub MCP server\nremote\napi.githubcopilot.com/mcp/",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "int",
+      "kind": "rect",
+      "x": 520.0,
+      "y": 347.0,
+      "w": 240.0,
+      "h": 100.0,
+      "text": "Internal MCP server\nruns as a local process",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ghsys",
+      "kind": "rect",
+      "x": 830.0,
+      "y": 165.0,
+      "w": 140.0,
+      "h": 90.0,
+      "text": "GitHub\nissues and PRs",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "intsys",
+      "kind": "rect",
+      "x": 830.0,
+      "y": 352.0,
+      "w": 140.0,
+      "h": 90.0,
+      "text": "An in-house\nsystem",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c_ac",
+      "from": "agent",
+      "to": "client",
+      "from_side": "bottom",
+      "to_side": "top",
+      "start_arrow": "arrow"
+    },
+    {
+      "type": "connector",
+      "id": "c_gh",
+      "from": "client",
+      "to": "gh",
+      "from_side": "right",
+      "to_side": "left",
+      "start_arrow": "arrow",
+      "label": "HTTP",
+      "label_at": 0.85,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c_int",
+      "from": "client",
+      "to": "int",
+      "from_side": "right",
+      "to_side": "left",
+      "start_arrow": "arrow",
+      "label": "stdio",
+      "label_at": 0.72,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c_ghsys",
+      "from": "gh",
+      "to": "ghsys",
+      "start_arrow": "arrow"
+    },
+    {
+      "type": "connector",
+      "id": "c_intsys",
+      "from": "int",
+      "to": "intsys",
+      "start_arrow": "arrow"
+    },
+    {
+      "type": "label",
+      "id": "takeaway",
+      "x": 40.0,
+      "y": 530.0,
+      "text": "The harness learns which servers exist from .mcp.json, and their tools appear beside the built-in ones.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="c_ac"><path d="M210 269L210 341" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M210 350L206 340L214 340Z" fill="#6b6a66"/><path d="M210 260L214 270L206 270Z" fill="#6b6a66"/></g>
+<g id="c_gh"><path d="M359 397.5L435 397.5L435 210L511 210" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M520 210L510 214L510 206Z" fill="#6b6a66"/><path d="M350 397.5L360 393.5L360 401.5Z" fill="#6b6a66"/><rect x="438.48" y="199.13" width="43.2" height="21.75" rx="2" fill="#ffffff"/><text x="460.08" y="215.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="460.08" dy="0">HTTP</tspan></text></g>
+<g id="c_int"><path d="M359 397.5L511 397.5" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M520 397.5L510 401.5L510 393.5Z" fill="#6b6a66"/><path d="M350 397.5L360 393.5L360 401.5Z" fill="#6b6a66"/><rect x="448.81" y="386.63" width="39.26" height="21.75" rx="2" fill="#ffffff"/><text x="468.44" y="403.13" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="468.44" dy="0">stdio</tspan></text></g>
+<g id="c_ghsys"><path d="M769 210L821 210" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M830 210L820 214L820 206Z" fill="#6b6a66"/><path d="M760 210L770 206L770 214Z" fill="#6b6a66"/></g>
+<g id="c_intsys"><path d="M769 397L821 397" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M830 397L820 401L820 393Z" fill="#6b6a66"/><path d="M760 397L770 393L770 401Z" fill="#6b6a66"/></g>
+<g id="title"><text x="325.53" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="325.53" dy="0">MCP: adding tools from outside the harness</tspan></text></g>
+<g id="subtitle"><text x="381.98" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="381.98" dy="0">An MCP server publishes tools; the harness's MCP client lists them and calls them for the agent.</tspan></text></g>
+<g id="harness"><path d="M52 120H368A12 12 0 0 1 380 132V468A12 12 0 0 1 368 480H52A12 12 0 0 1 40 468V132A12 12 0 0 1 52 120Z" fill="none" stroke="#2a78d6" stroke-width="2"/></g>
+<g id="hlabel"><text x="123.85" y="150" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="123.85" dy="0">Copilot harness</tspan></text></g>
+<g id="agent"><path d="M70 175H350V260H70Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="210" y="213.5" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="210" dy="0">Agent</tspan><tspan x="210" dy="20">picks the tool it needs</tspan></text></g>
+<g id="client"><path d="M70 350H350V445H70Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="210" y="383.5" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="210" dy="0">MCP client</tspan><tspan x="210" dy="20">lists each server's tools</tspan><tspan x="210" dy="20">and calls them</tspan></text></g>
+<g id="gh"><path d="M520 160H760V260H520Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="640" y="196" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="640" dy="0">GitHub MCP server</tspan><tspan x="640" dy="20">remote</tspan><tspan x="640" dy="20">api.githubcopilot.com/mcp/</tspan></text></g>
+<g id="int"><path d="M520 347H760V447H520Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="640" y="393" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="640" dy="0">Internal MCP server</tspan><tspan x="640" dy="20">runs as a local process</tspan></text></g>
+<g id="ghsys"><path d="M830 165H970V255H830Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="900" y="206" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="900" dy="0">GitHub</tspan><tspan x="900" dy="20">issues and PRs</tspan></text></g>
+<g id="intsys"><path d="M830 352H970V442H830Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="900" y="393" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="900" dy="0">An in-house</tspan><tspan x="900" dy="20">system</tspan></text></g>
+<g id="takeaway"><text x="398.92" y="546" font-family="IBM Plex Sans" font-size="16" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="398.92" dy="0">The harness learns which servers exist from .mcp.json, and their tools appear beside the built-in ones.</tspan></text></g>
+</g>
+</svg>

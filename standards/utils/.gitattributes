@@ -1,0 +1,2 @@
+# assemble.sh runs under bash and must keep LF line endings even on Windows checkouts.
+assemble.sh   text eol=lf

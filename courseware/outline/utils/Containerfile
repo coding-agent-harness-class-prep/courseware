@@ -1,0 +1,42 @@
+# Containerfile for the course-outline toolchain.
+#
+# Builds a small image that converts the Markdown outline in ../md into a styled
+# PDF in ../pdf:
+#
+#   Markdown --(build.mjs + marked)--> HTML --(headless Chrome)--> PDF
+#
+# Build + run it with the wrapper scripts in this folder (convert.sh / convert.ps1),
+# which use podman by default (override with CONTAINER_ENGINE=docker).
+
+# Reuse the Marp CLI base image: it is Debian-based and already bundles Node.js
+# and a headless Chrome (exposed via $CHROME_PATH). We add the Markdown renderer
+# and readable fonts on top. Sharing this base with the slides toolchain keeps the
+# two pipelines consistent and avoids a second large download.
+FROM marpteam/marp-cli:latest
+
+USER root
+
+# Fonts for clean body text and code blocks in the rendered PDF.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        fonts-firacode \
+        fonts-liberation \
+        fonts-dejavu \
+    && rm -rf /var/lib/apt/lists/*
+
+# The converter, its stylesheet, and the Markdown renderer (marked), all baked in
+# so the build is reproducible and needs no network at run time.
+RUN mkdir -p /opt/outline
+COPY build.mjs print.cjs outline.css /opt/outline/
+COPY entrypoint.sh /usr/local/bin/outline-entrypoint.sh
+RUN sed -i 's/\r$//' /usr/local/bin/outline-entrypoint.sh /opt/outline/build.mjs /opt/outline/print.cjs \
+    && chmod +x /usr/local/bin/outline-entrypoint.sh \
+    && cd /opt/outline \
+    && npm install --no-audit --no-fund --loglevel=error marked
+
+# Run as the unprivileged `marp` user the base image ships with; the outline
+# directory is mounted at /work at run time.
+WORKDIR /work
+USER marp
+
+ENTRYPOINT ["/usr/local/bin/outline-entrypoint.sh"]

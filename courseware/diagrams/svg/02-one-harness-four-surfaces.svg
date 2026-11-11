@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="2a42b13840772666"><![CDATA[
+{
+  "version": 1,
+  "title": "One harness, four surfaces",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "One harness, four surfaces",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "Each surface is a different front end on the same agent runtime, reading the same checked-in files.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "lab1",
+      "x": 40.0,
+      "y": 155.0,
+      "text": "Surfaces",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "lab2",
+      "x": 40.0,
+      "y": 265.0,
+      "text": "Harness",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "lab3",
+      "x": 40.0,
+      "y": 390.0,
+      "text": "Repo files",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "vscode",
+      "kind": "rect",
+      "x": 160.0,
+      "y": 120.0,
+      "w": 190.0,
+      "h": 90.0,
+      "text": "VS Code\nin the editor",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cli",
+      "kind": "rect",
+      "x": 366.0,
+      "y": 120.0,
+      "w": 190.0,
+      "h": 90.0,
+      "text": "Copilot CLI\nin the terminal",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "app",
+      "kind": "rect",
+      "x": 572.0,
+      "y": 120.0,
+      "w": 190.0,
+      "h": 90.0,
+      "text": "Copilot app\non the desktop",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "web",
+      "kind": "rect",
+      "x": 778.0,
+      "y": 120.0,
+      "w": 190.0,
+      "h": 90.0,
+      "text": "GitHub.com\nCopilot cloud agent",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "harness",
+      "kind": "rect",
+      "x": 160.0,
+      "y": 230.0,
+      "w": 808.0,
+      "h": 90.0,
+      "text": "Copilot harness\none agent loop: context assembly · tools · approvals · session state",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "instr",
+      "kind": "rect",
+      "x": 160.0,
+      "y": 340.0,
+      "w": 258.0,
+      "h": 120.0,
+      "text": "Instructions\n.github/copilot-instructions.md\n*.instructions.md · AGENTS.md",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "agents",
+      "kind": "rect",
+      "x": 435.0,
+      "y": 340.0,
+      "w": 258.0,
+      "h": 120.0,
+      "text": "Custom agents\n.github/agents/NAME.agent.md",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "mcp",
+      "kind": "rect",
+      "x": 710.0,
+      "y": 340.0,
+      "w": 258.0,
+      "h": 120.0,
+      "text": "MCP servers\n.mcp.json\n(cloud agent: repo settings)",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "takeaway",
+      "x": 40.0,
+      "y": 510.0,
+      "text": "Learn the harness once. The customizations you check in follow you to every surface.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="title"><text x="215.73" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="215.73" dy="0">One harness, four surfaces</tspan></text></g>
+<g id="subtitle"><text x="392.19" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="392.19" dy="0">Each surface is a different front end on the same agent runtime, reading the same checked-in files.</tspan></text></g>
+<g id="lab1"><text x="73.13" y="171" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#6b6a66" text-anchor="middle"><tspan x="73.13" dy="0">Surfaces</tspan></text></g>
+<g id="lab2"><text x="70.85" y="281" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#6b6a66" text-anchor="middle"><tspan x="70.85" dy="0">Harness</tspan></text></g>
+<g id="lab3"><text x="77.16" y="406" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#6b6a66" text-anchor="middle"><tspan x="77.16" dy="0">Repo files</tspan></text></g>
+<g id="vscode"><path d="M160 120H350V210H160Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="255" y="161" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="255" dy="0">VS Code</tspan><tspan x="255" dy="20">in the editor</tspan></text></g>
+<g id="cli"><path d="M366 120H556V210H366Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="461" y="161" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="461" dy="0">Copilot CLI</tspan><tspan x="461" dy="20">in the terminal</tspan></text></g>
+<g id="app"><path d="M572 120H762V210H572Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="667" y="161" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="667" dy="0">Copilot app</tspan><tspan x="667" dy="20">on the desktop</tspan></text></g>
+<g id="web"><path d="M778 120H968V210H778Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="873" y="161" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="873" dy="0">GitHub.com</tspan><tspan x="873" dy="20">Copilot cloud agent</tspan></text></g>
+<g id="harness"><path d="M160 230H968V320H160Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="564" y="270.5" font-family="IBM Plex Sans" font-size="18" fill="#10386b" text-anchor="middle"><tspan x="564" dy="0">Copilot harness</tspan><tspan x="564" dy="22.5">one agent loop: context assembly · tools · approvals · session state</tspan></text></g>
+<g id="instr"><path d="M160 340H418V460H160Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="289" y="386.88" font-family="IBM Plex Sans" font-size="15" fill="#0a4d36" text-anchor="middle"><tspan x="289" dy="0">Instructions</tspan><tspan x="289" dy="18.75">.github/copilot-instructions.md</tspan><tspan x="289" dy="18.75">*.instructions.md · AGENTS.md</tspan></text></g>
+<g id="agents"><path d="M435 340H693V460H435Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="564" y="396.25" font-family="IBM Plex Sans" font-size="15" fill="#0a4d36" text-anchor="middle"><tspan x="564" dy="0">Custom agents</tspan><tspan x="564" dy="18.75">.github/agents/NAME.agent.md</tspan></text></g>
+<g id="mcp"><path d="M710 340H968V460H710Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="839" y="386.88" font-family="IBM Plex Sans" font-size="15" fill="#0a4d36" text-anchor="middle"><tspan x="839" dy="0">MCP servers</tspan><tspan x="839" dy="18.75">.mcp.json</tspan><tspan x="839" dy="18.75">(cloud agent: repo settings)</tspan></text></g>
+<g id="takeaway"><text x="336.94" y="526" font-family="IBM Plex Sans" font-size="16" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="336.94" dy="0">Learn the harness once. The customizations you check in follow you to every surface.</tspan></text></g>
+</g>
+</svg>

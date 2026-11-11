@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="e859f858ea48b54f"><![CDATA[
+{
+  "version": 1,
+  "title": "How instruction files combine",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "How instruction files combine",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "Copilot loads every instruction file that applies to the work in front of it, and uses them together.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "repo",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 120.0,
+      "w": 290.0,
+      "h": 130.0,
+      "text": "Repository-wide\n.github/copilot-instructions.md\nalways loaded",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "path",
+      "kind": "rect",
+      "x": 359.0,
+      "y": 120.0,
+      "w": 290.0,
+      "h": 130.0,
+      "text": "Path-specific\n.github/instructions/*.instructions.md\nloaded when applyTo matches\nthe file being worked on",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "agents",
+      "kind": "rect",
+      "x": 678.0,
+      "y": 120.0,
+      "w": 290.0,
+      "h": 130.0,
+      "text": "Agent instructions\nAGENTS.md\nthe nearest one in the\ndirectory tree wins",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "combined",
+      "kind": "rect",
+      "x": 274.0,
+      "y": 350.0,
+      "w": 460.0,
+      "h": 90.0,
+      "text": "Combined instructions\nadded to the request with your prompt and context",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "takeaway",
+      "x": 40.0,
+      "y": 520.0,
+      "text": "Put rules that always apply in copilot-instructions.md, and rules for one part of the code in a path-specific file.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c1",
+      "from": "repo",
+      "to": "combined",
+      "from_side": "bottom",
+      "to_side": "top"
+    },
+    {
+      "type": "connector",
+      "id": "c2",
+      "from": "path",
+      "to": "combined",
+      "from_side": "bottom",
+      "to_side": "top"
+    },
+    {
+      "type": "connector",
+      "id": "c3",
+      "from": "agents",
+      "to": "combined",
+      "from_side": "bottom",
+      "to_side": "top"
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="c1"><path d="M185 250L185 300L504 300L504 341" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M504 350L500 340L508 340Z" fill="#6b6a66"/></g>
+<g id="c2"><path d="M504 250L504 341" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M504 350L500 340L508 340Z" fill="#6b6a66"/></g>
+<g id="c3"><path d="M823 250L823 300L504 300L504 341" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M504 350L500 340L508 340Z" fill="#6b6a66"/></g>
+<g id="title"><text x="235.61" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="235.61" dy="0">How instruction files combine</tspan></text></g>
+<g id="subtitle"><text x="382.35" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="382.35" dy="0">Copilot loads every instruction file that applies to the work in front of it, and uses them together.</tspan></text></g>
+<g id="repo"><path d="M40 120H330V250H40Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="185" y="171.88" font-family="IBM Plex Sans" font-size="15" fill="#10386b" text-anchor="middle"><tspan x="185" dy="0">Repository-wide</tspan><tspan x="185" dy="18.75">.github/copilot-instructions.md</tspan><tspan x="185" dy="18.75">always loaded</tspan></text></g>
+<g id="path"><path d="M359 120H649V250H359Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="504" y="162.5" font-family="IBM Plex Sans" font-size="15" fill="#0a4d36" text-anchor="middle"><tspan x="504" dy="0">Path-specific</tspan><tspan x="504" dy="18.75">.github/instructions/*.instructions.md</tspan><tspan x="504" dy="18.75">loaded when applyTo matches</tspan><tspan x="504" dy="18.75">the file being worked on</tspan></text></g>
+<g id="agents"><path d="M678 120H968V250H678Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="823" y="162.5" font-family="IBM Plex Sans" font-size="15" fill="#2a2160" text-anchor="middle"><tspan x="823" dy="0">Agent instructions</tspan><tspan x="823" dy="18.75">AGENTS.md</tspan><tspan x="823" dy="18.75">the nearest one in the</tspan><tspan x="823" dy="18.75">directory tree wins</tspan></text></g>
+<g id="combined"><path d="M274 350H734V440H274Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="504" y="390.75" font-family="IBM Plex Sans" font-size="17" fill="#7a2f0f" text-anchor="middle"><tspan x="504" dy="0">Combined instructions</tspan><tspan x="504" dy="21.25">added to the request with your prompt and context</tspan></text></g>
+<g id="takeaway"><text x="426.78" y="536" font-family="IBM Plex Sans" font-size="16" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="426.78" dy="0">Put rules that always apply in copilot-instructions.md, and rules for one part of the code in a path-specific file.</tspan></text></g>
+</g>
+</svg>

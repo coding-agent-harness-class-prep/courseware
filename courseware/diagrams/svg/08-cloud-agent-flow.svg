@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="88f7c546e1d63193"><![CDATA[
+{
+  "version": 1,
+  "title": "From issue to pull request",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "The cloud agent: from issue to pull request",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "An issue-assigned session runs in a GitHub Actions environment and comes back as a draft pull request.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "issue",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 125.0,
+      "w": 220.0,
+      "h": 110.0,
+      "text": "Issue\na clear task with\nacceptance criteria",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "assign",
+      "kind": "rect",
+      "x": 360.0,
+      "y": 125.0,
+      "w": 240.0,
+      "h": 110.0,
+      "text": "Assign to Copilot\nAssignees → Copilot,\nplus an optional prompt",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "env",
+      "kind": "rect",
+      "x": 690.0,
+      "y": 125.0,
+      "w": 278.0,
+      "h": 110.0,
+      "text": "GitHub Actions environment\ncopilot-setup-steps.yml\ninstalls the toolchain",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "work",
+      "kind": "rect",
+      "x": 690.0,
+      "y": 320.0,
+      "w": 278.0,
+      "h": 145.0,
+      "text": "Work, then validate\nedit · build · run tests\nCodeQL · secret scanning\ndependency check\nCopilot code review",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "pr",
+      "kind": "rect",
+      "x": 370.0,
+      "y": 337.0,
+      "w": 220.0,
+      "h": 110.0,
+      "text": "Draft pull request\nlinked to the issue,\nwith a session log",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "review",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 337.0,
+      "w": 230.0,
+      "h": 110.0,
+      "text": "Human review\nanother reviewer\nmust approve",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c1",
+      "from": "issue",
+      "to": "assign"
+    },
+    {
+      "type": "connector",
+      "id": "c2",
+      "from": "assign",
+      "to": "env"
+    },
+    {
+      "type": "connector",
+      "id": "c3",
+      "from": "env",
+      "to": "work",
+      "from_side": "bottom",
+      "to_side": "top"
+    },
+    {
+      "type": "connector",
+      "id": "c4",
+      "from": "work",
+      "to": "pr",
+      "from_side": "left",
+      "to_side": "right"
+    },
+    {
+      "type": "connector",
+      "id": "c5",
+      "from": "pr",
+      "to": "review",
+      "from_side": "left",
+      "to_side": "right"
+    },
+    {
+      "type": "connector",
+      "id": "c6",
+      "from": "review",
+      "to": "work",
+      "from_side": "bottom",
+      "to_side": "bottom",
+      "label": "comment @copilot to ask for another pass",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": "dashed",
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "takeaway",
+      "x": 40.0,
+      "y": 548.0,
+      "text": "Copilot pushes only to its own branch, and its pull request still needs a person's approval.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="c1"><path d="M260 180L351 180" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M360 180L350 184L350 176Z" fill="#6b6a66"/></g>
+<g id="c2"><path d="M600 180L681 180" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M690 180L680 184L680 176Z" fill="#6b6a66"/></g>
+<g id="c3"><path d="M829 235L829 311" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M829 320L825 310L833 310Z" fill="#6b6a66"/></g>
+<g id="c4"><path d="M690 392.5L599 392.5" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M590 392.5L600 388.5L600 396.5Z" fill="#6b6a66"/></g>
+<g id="c5"><path d="M370 392L279 392" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M270 392L280 388L280 396Z" fill="#6b6a66"/></g>
+<g id="c6"><path d="M155 447L155 481L829 481L829 474" fill="none" stroke="#6b6a66" stroke-width="1.5" stroke-dasharray="6 3.75" stroke-linecap="round"/><path d="M829 465L833 475L825 475Z" fill="#6b6a66"/><rect x="333.53" y="470.13" width="289.94" height="21.75" rx="2" fill="#ffffff"/><text x="478.5" y="486.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="478.5" dy="0">comment @copilot to ask for another pass</tspan></text></g>
+<g id="title"><text x="319.75" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="319.75" dy="0">The cloud agent: from issue to pull request</tspan></text></g>
+<g id="subtitle"><text x="412.16" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="412.16" dy="0">An issue-assigned session runs in a GitHub Actions environment and comes back as a draft pull request.</tspan></text></g>
+<g id="issue"><path d="M40 125H260V235H40Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="150" y="166" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="150" dy="0">Issue</tspan><tspan x="150" dy="20">a clear task with</tspan><tspan x="150" dy="20">acceptance criteria</tspan></text></g>
+<g id="assign"><path d="M360 125H600V235H360Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="480" y="166" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="480" dy="0">Assign to Copilot</tspan><tspan x="480" dy="20">Assignees → Copilot,</tspan><tspan x="480" dy="20">plus an optional prompt</tspan></text></g>
+<g id="env"><path d="M690 125H968V235H690Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="829" y="166" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="829" dy="0">GitHub Actions environment</tspan><tspan x="829" dy="20">copilot-setup-steps.yml</tspan><tspan x="829" dy="20">installs the toolchain</tspan></text></g>
+<g id="work"><path d="M690 320H968V465H690Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="829" y="358.5" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="829" dy="0">Work, then validate</tspan><tspan x="829" dy="20">edit · build · run tests</tspan><tspan x="829" dy="20">CodeQL · secret scanning</tspan><tspan x="829" dy="20">dependency check</tspan><tspan x="829" dy="20">Copilot code review</tspan></text></g>
+<g id="pr"><path d="M370 337H590V447H370Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="480" y="378" font-family="IBM Plex Sans" font-size="16" fill="#7a2f0f" text-anchor="middle"><tspan x="480" dy="0">Draft pull request</tspan><tspan x="480" dy="20">linked to the issue,</tspan><tspan x="480" dy="20">with a session log</tspan></text></g>
+<g id="review"><path d="M40 337H270V447H40Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="155" y="378" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="155" dy="0">Human review</tspan><tspan x="155" dy="20">another reviewer</tspan><tspan x="155" dy="20">must approve</tspan></text></g>
+<g id="takeaway"><text x="354.26" y="564" font-family="IBM Plex Sans" font-size="16" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="354.26" dy="0">Copilot pushes only to its own branch, and its pull request still needs a person's approval.</tspan></text></g>
+</g>
+</svg>

@@ -1,0 +1,49 @@
+name: Validate Courseware
+
+# Runs the courseware/validations harness: every sample app builds and passes, every reference
+# solution passes, every planted bug's repro test fails for the reason its issue describes, no slide
+# is clipped, and every relative link resolves.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: courseware/validations
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Node.js 24 (the harness)
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: courseware/validations/package-lock.json
+
+      - name: Set up .NET 10 (the .NET samples)
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Set up Java 21 (the Java samples)
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Install harness dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Validate samples, slides, and links
+        run: npm test

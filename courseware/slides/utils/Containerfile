@@ -1,0 +1,45 @@
+# Containerfile for the GitHub Copilot as a Coding-Agent Harness slide toolchain.
+#
+# Builds a small image that converts the Markdown slide decks in ../md into
+# PowerPoint (.pptx) and PDF, plus a merged all-modules PDF, using Marp.
+#
+# Pipeline inside the container (see entrypoint.sh):
+#   Markdown --(preprocess.mjs)--> Marp Markdown --(marp-cli)--> .pptx + .pdf
+#                                                --(pdfunite)--> combined.pdf
+#
+# Build + run it with the wrapper scripts in this folder (convert.sh / convert.ps1),
+# which use podman by default (override with CONTAINER_ENGINE=docker).
+
+# The official Marp CLI image is Debian-based and already bundles Node.js and a
+# headless Chrome for Testing (used to render PDF/PPTX). We add poppler-utils
+# (pdfunite, to merge the per-module PDFs) and readable fonts on top.
+FROM marpteam/marp-cli:latest
+
+USER root
+
+# Toolchain additions:
+#   poppler-utils  - pdfunite, to merge per-module PDFs into one deck
+#   fonts-firacode - Fira Code, the monospace used for code/terminal blocks
+#   fonts-liberation / fonts-dejavu - clean sans + fallbacks for body text
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        poppler-utils \
+        fonts-firacode \
+        fonts-liberation \
+        fonts-dejavu \
+    && rm -rf /var/lib/apt/lists/*
+
+# The toolchain scripts. Strip any CR characters (in case they were checked out
+# with CRLF on Windows) and make the entrypoint executable so its shebang works.
+COPY entrypoint.sh /usr/local/bin/slides-entrypoint.sh
+COPY preprocess.mjs /usr/local/bin/preprocess.mjs
+RUN sed -i 's/\r$//' /usr/local/bin/slides-entrypoint.sh /usr/local/bin/preprocess.mjs \
+    && chmod +x /usr/local/bin/slides-entrypoint.sh
+
+# Run everything as the unprivileged `marp` user the base image ships with —
+# headless Chrome is configured to render as that user. The slides directory is
+# mounted at /work at run time.
+WORKDIR /work
+USER marp
+
+ENTRYPOINT ["/usr/local/bin/slides-entrypoint.sh"]

@@ -1,0 +1,19 @@
+{
+  "name": "courseware-validations",
+  "version": "2.0.0",
+  "description": "Instructor/CI harness proving every sample app, reference solution, and planted bug behaves as the course says, and that the slides and links are sound",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "test:samples": "vitest run unit/samples.test.js",
+    "test:slides": "vitest run unit/slides.test.js",
+    "test:links": "vitest run unit/links.test.js",
+    "validate": "vitest run",
+    "clean": "node lib/clean.js"
+  },
+  "devDependencies": {
+    "pdfjs-dist": "6.2.108",
+    "vitest": "4.1.11"
+  }
+}

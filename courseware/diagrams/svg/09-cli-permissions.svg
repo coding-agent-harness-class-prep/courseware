@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="4a28fb379b149e05"><![CDATA[
+{
+  "version": 1,
+  "title": "How the Copilot CLI decides whether a tool runs",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "Copilot CLI permissions: does this tool run?",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "Every tool call the agent wants to make is checked against your rules in this order.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "prompt",
+      "kind": "stadium",
+      "x": 40.0,
+      "y": 125.0,
+      "w": 130.0,
+      "h": 70.0,
+      "text": "Your prompt",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "tool",
+      "kind": "rect",
+      "x": 230.0,
+      "y": 120.0,
+      "w": 180.0,
+      "h": 80.0,
+      "text": "Tool request\nshell(git push)",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "deny",
+      "kind": "diamond",
+      "x": 470.0,
+      "y": 105.0,
+      "w": 180.0,
+      "h": 110.0,
+      "text": "Deny rule\nmatches?",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "blocked",
+      "kind": "rect",
+      "x": 740.0,
+      "y": 115.0,
+      "w": 210.0,
+      "h": 90.0,
+      "text": "Blocked\n--deny-tool wins, even\nover --allow-all-tools",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "allow",
+      "kind": "diamond",
+      "x": 470.0,
+      "y": 275.0,
+      "w": 180.0,
+      "h": 110.0,
+      "text": "Already\nallowed?",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ask",
+      "kind": "rect",
+      "x": 740.0,
+      "y": 285.0,
+      "w": 210.0,
+      "h": 90.0,
+      "text": "Ask you\nyes, yes for the session,\nor no and redirect",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "sandbox",
+      "kind": "rect",
+      "x": 450.0,
+      "y": 440.0,
+      "w": 220.0,
+      "h": 85.0,
+      "text": "Sandbox\nisolates shell commands\nonce /sandbox enable is on",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "run",
+      "kind": "stadium",
+      "x": 230.0,
+      "y": 447.0,
+      "w": 150.0,
+      "h": 70.0,
+      "text": "Tool runs",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c1",
+      "from": "prompt",
+      "to": "tool"
+    },
+    {
+      "type": "connector",
+      "id": "c2",
+      "from": "tool",
+      "to": "deny"
+    },
+    {
+      "type": "connector",
+      "id": "c3",
+      "from": "deny",
+      "to": "blocked",
+      "from_side": "right",
+      "to_side": "left",
+      "label": "yes",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c4",
+      "from": "deny",
+      "to": "allow",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "no",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c5",
+      "from": "allow",
+      "to": "ask",
+      "from_side": "right",
+      "to_side": "left",
+      "label": "no",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c6",
+      "from": "allow",
+      "to": "sandbox",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "yes",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c7",
+      "from": "ask",
+      "to": "sandbox",
+      "from_side": "bottom",
+      "to_side": "right",
+      "label": "yes",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c8",
+      "from": "sandbox",
+      "to": "run",
+      "from_side": "left",
+      "to_side": "right"
+    },
+    {
+      "type": "label",
+      "id": "takeaway",
+      "x": 40.0,
+      "y": 552.0,
+      "text": "Deny rules always win. Allow rules, earlier approvals, and most reads skip the prompt; anything else asks you.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="c1"><path d="M170 160L221 160" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M230 160L220 164L220 156Z" fill="#6b6a66"/></g>
+<g id="c2"><path d="M410 160L461 160" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M470 160L460 164L460 156Z" fill="#6b6a66"/></g>
+<g id="c3"><path d="M650 160L731 160" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M740 160L730 164L730 156Z" fill="#6b6a66"/><rect x="676.03" y="149.13" width="28.95" height="21.75" rx="2" fill="#ffffff"/><text x="690.5" y="165.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="690.5" dy="0">yes</tspan></text></g>
+<g id="c4"><path d="M560 215L560 266" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M560 275L556 265L564 265Z" fill="#6b6a66"/><rect x="548.54" y="229.63" width="22.92" height="21.75" rx="2" fill="#ffffff"/><text x="560" y="246.13" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="560" dy="0">no</tspan></text></g>
+<g id="c5"><path d="M650 330L731 330" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M740 330L730 334L730 326Z" fill="#6b6a66"/><rect x="679.04" y="319.13" width="22.92" height="21.75" rx="2" fill="#ffffff"/><text x="690.5" y="335.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="690.5" dy="0">no</tspan></text></g>
+<g id="c6"><path d="M560 385L560 431" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M560 440L556 430L564 430Z" fill="#6b6a66"/><rect x="545.53" y="397.13" width="28.95" height="21.75" rx="2" fill="#ffffff"/><text x="560" y="413.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="560" dy="0">yes</tspan></text></g>
+<g id="c7"><path d="M845 375L845 482.5L679 482.5" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M670 482.5L680 478.5L680 486.5Z" fill="#6b6a66"/><rect x="801.28" y="471.63" width="28.95" height="21.75" rx="2" fill="#ffffff"/><text x="815.75" y="488.13" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="815.75" dy="0">yes</tspan></text></g>
+<g id="c8"><path d="M450 482.5L389 482.5" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M380 482.5L390 478.5L390 486.5Z" fill="#6b6a66"/></g>
+<g id="title"><text x="324.62" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="324.62" dy="0">Copilot CLI permissions: does this tool run?</tspan></text></g>
+<g id="subtitle"><text x="331.74" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="331.74" dy="0">Every tool call the agent wants to make is checked against your rules in this order.</tspan></text></g>
+<g id="prompt"><path d="M75 125H135A35 35 0 0 1 170 160V160A35 35 0 0 1 135 195H75A35 35 0 0 1 40 160V160A35 35 0 0 1 75 125Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="105" y="166" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="105" dy="0">Your prompt</tspan></text></g>
+<g id="tool"><path d="M230 120H410V200H230Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="320" y="156" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="320" dy="0">Tool request</tspan><tspan x="320" dy="20">shell(git push)</tspan></text></g>
+<g id="deny"><path d="M560 105L650 160L560 215L470 160Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="560" y="156" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="560" dy="0">Deny rule</tspan><tspan x="560" dy="20">matches?</tspan></text></g>
+<g id="blocked"><path d="M740 115H950V205H740Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="845" y="146" font-family="IBM Plex Sans" font-size="16" fill="#7a2f0f" text-anchor="middle"><tspan x="845" dy="0">Blocked</tspan><tspan x="845" dy="20">--deny-tool wins, even</tspan><tspan x="845" dy="20">over --allow-all-tools</tspan></text></g>
+<g id="allow"><path d="M560 275L650 330L560 385L470 330Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="560" y="326" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="560" dy="0">Already</tspan><tspan x="560" dy="20">allowed?</tspan></text></g>
+<g id="ask"><path d="M740 285H950V375H740Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="845" y="316" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="845" dy="0">Ask you</tspan><tspan x="845" dy="20">yes, yes for the session,</tspan><tspan x="845" dy="20">or no and redirect</tspan></text></g>
+<g id="sandbox"><path d="M450 440H670V525H450Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="560" y="468.5" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="560" dy="0">Sandbox</tspan><tspan x="560" dy="20">isolates shell commands</tspan><tspan x="560" dy="20">once /sandbox enable is on</tspan></text></g>
+<g id="run"><path d="M265 447H345A35 35 0 0 1 380 482V482A35 35 0 0 1 345 517H265A35 35 0 0 1 230 482V482A35 35 0 0 1 265 447Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="305" y="488" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="305" dy="0">Tool runs</tspan></text></g>
+<g id="takeaway"><text x="427.19" y="568" font-family="IBM Plex Sans" font-size="16" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="427.19" dy="0">Deny rules always win. Allow rules, earlier approvals, and most reads skip the prompt; anything else asks you.</tspan></text></g>
+</g>
+</svg>

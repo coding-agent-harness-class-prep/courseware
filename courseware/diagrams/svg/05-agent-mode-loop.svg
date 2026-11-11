@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="3e10b8fdd6891e61"><![CDATA[
+{
+  "version": 1,
+  "title": "The agent mode loop",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "The agent mode loop",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "One task becomes many small steps, and each tool call passes through an approval gate.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "task",
+      "kind": "stadium",
+      "x": 40.0,
+      "y": 205.0,
+      "w": 130.0,
+      "h": 70.0,
+      "text": "Your task",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "plan",
+      "kind": "rect",
+      "x": 240.0,
+      "y": 200.0,
+      "w": 170.0,
+      "h": 80.0,
+      "text": "Plan the\nnext step",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "tool",
+      "kind": "rect",
+      "x": 490.0,
+      "y": 200.0,
+      "w": 180.0,
+      "h": 80.0,
+      "text": "Call a tool\nedit · run · search",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "gate",
+      "kind": "diamond",
+      "x": 750.0,
+      "y": 180.0,
+      "w": 170.0,
+      "h": 120.0,
+      "text": "Approved?",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "result",
+      "kind": "rect",
+      "x": 735.0,
+      "y": 400.0,
+      "w": 200.0,
+      "h": 80.0,
+      "text": "Run it; the result\ngoes back into context",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "done",
+      "kind": "diamond",
+      "x": 245.0,
+      "y": 380.0,
+      "w": 160.0,
+      "h": 120.0,
+      "text": "Done?",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "finish",
+      "kind": "stadium",
+      "x": 40.0,
+      "y": 405.0,
+      "w": 130.0,
+      "h": 70.0,
+      "text": "Summary\nfor review",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c1",
+      "from": "task",
+      "to": "plan"
+    },
+    {
+      "type": "connector",
+      "id": "c2",
+      "from": "plan",
+      "to": "tool"
+    },
+    {
+      "type": "connector",
+      "id": "c3",
+      "from": "tool",
+      "to": "gate"
+    },
+    {
+      "type": "connector",
+      "id": "c4",
+      "from": "gate",
+      "to": "result",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "yes",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c5",
+      "from": "gate",
+      "to": "plan",
+      "from_side": "top",
+      "to_side": "top",
+      "label": "no: you say what to do instead",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c6",
+      "from": "result",
+      "to": "done",
+      "from_side": "left",
+      "to_side": "right"
+    },
+    {
+      "type": "connector",
+      "id": "c7",
+      "from": "done",
+      "to": "plan",
+      "from_side": "top",
+      "to_side": "bottom",
+      "label": "no: next step",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c8",
+      "from": "done",
+      "to": "finish",
+      "from_side": "left",
+      "to_side": "right",
+      "label": "yes",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "takeaway",
+      "x": 40.0,
+      "y": 545.0,
+      "text": "The approval gate is where you stay in charge: let the step run, or stop it and redirect the agent.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="c1"><path d="M170 240L231 240" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M240 240L230 244L230 236Z" fill="#6b6a66"/></g>
+<g id="c2"><path d="M410 240L481 240" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M490 240L480 244L480 236Z" fill="#6b6a66"/></g>
+<g id="c3"><path d="M670 240L741 240" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M750 240L740 244L740 236Z" fill="#6b6a66"/></g>
+<g id="c4"><path d="M835 300L835 391" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M835 400L831 390L839 390Z" fill="#6b6a66"/><rect x="820.53" y="334.63" width="28.95" height="21.75" rx="2" fill="#ffffff"/><text x="835" y="351.13" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="835" dy="0">yes</tspan></text></g>
+<g id="c5"><path d="M835 180L835 164L325 164L325 191" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M325 200L321 190L329 190Z" fill="#6b6a66"/><rect x="469.88" y="153.13" width="209.24" height="21.75" rx="2" fill="#ffffff"/><text x="574.5" y="169.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="574.5" dy="0">no: you say what to do instead</tspan></text></g>
+<g id="c6"><path d="M735 440L414 440" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M405 440L415 436L415 444Z" fill="#6b6a66"/></g>
+<g id="c7"><path d="M325 380L325 289" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M325 280L329 290L321 290Z" fill="#6b6a66"/><rect x="278.42" y="323.63" width="93.17" height="21.75" rx="2" fill="#ffffff"/><text x="325" y="340.13" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="325" dy="0">no: next step</tspan></text></g>
+<g id="c8"><path d="M245 440L179 440" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M170 440L180 436L180 444Z" fill="#6b6a66"/><rect x="197.53" y="429.13" width="28.95" height="21.75" rx="2" fill="#ffffff"/><text x="212" y="445.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="212" dy="0">yes</tspan></text></g>
+<g id="title"><text x="176.82" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="176.82" dy="0">The agent mode loop</tspan></text></g>
+<g id="subtitle"><text x="357.7" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="357.7" dy="0">One task becomes many small steps, and each tool call passes through an approval gate.</tspan></text></g>
+<g id="task"><path d="M75 205H135A35 35 0 0 1 170 240V240A35 35 0 0 1 135 275H75A35 35 0 0 1 40 240V240A35 35 0 0 1 75 205Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="105" y="246" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="105" dy="0">Your task</tspan></text></g>
+<g id="plan"><path d="M240 200H410V280H240Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="325" y="236" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="325" dy="0">Plan the</tspan><tspan x="325" dy="20">next step</tspan></text></g>
+<g id="tool"><path d="M490 200H670V280H490Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="580" y="236" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="580" dy="0">Call a tool</tspan><tspan x="580" dy="20">edit · run · search</tspan></text></g>
+<g id="gate"><path d="M835 180L920 240L835 300L750 240Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="835" y="246" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="835" dy="0">Approved?</tspan></text></g>
+<g id="result"><path d="M735 400H935V480H735Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="835" y="436" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="835" dy="0">Run it; the result</tspan><tspan x="835" dy="20">goes back into context</tspan></text></g>
+<g id="done"><path d="M325 380L405 440L325 500L245 440Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="325" y="446" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="325" dy="0">Done?</tspan></text></g>
+<g id="finish"><path d="M75 405H135A35 35 0 0 1 170 440V440A35 35 0 0 1 135 475H75A35 35 0 0 1 40 440V440A35 35 0 0 1 75 405Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="105" y="436" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="105" dy="0">Summary</tspan><tspan x="105" dy="20">for review</tspan></text></g>
+<g id="takeaway"><text x="373.81" y="561" font-family="IBM Plex Sans" font-size="16" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="373.81" dy="0">The approval gate is where you stay in charge: let the step run, or stop it and redirect the agent.</tspan></text></g>
+</g>
+</svg>

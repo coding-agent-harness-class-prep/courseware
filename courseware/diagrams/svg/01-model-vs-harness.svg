@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="e0c17bbc6434b1fc"><![CDATA[
+{
+  "version": 1,
+  "title": "Model vs harness: the agent loop",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "Model vs. harness: the agent loop",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "The model only predicts the next step. The harness around it does everything else.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "you",
+      "kind": "stadium",
+      "x": 30.0,
+      "y": 260.0,
+      "w": 120.0,
+      "h": 80.0,
+      "text": "You",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 20.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "harness",
+      "kind": "rect",
+      "x": 245.0,
+      "y": 150.0,
+      "w": 480.0,
+      "h": 300.0,
+      "text": "",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": 2.0,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": 12.0,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "hlabel",
+      "x": 263.0,
+      "y": 162.0,
+      "text": "Copilot harness",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ctx",
+      "kind": "rect",
+      "x": 262.0,
+      "y": 200.0,
+      "w": 215.0,
+      "h": 100.0,
+      "text": "Context assembly\ninstructions · files · history",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "tools",
+      "kind": "rect",
+      "x": 493.0,
+      "y": 200.0,
+      "w": 215.0,
+      "h": 100.0,
+      "text": "Tools\nread · edit · run · search",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "appr",
+      "kind": "rect",
+      "x": 262.0,
+      "y": 320.0,
+      "w": 215.0,
+      "h": 100.0,
+      "text": "Approvals\nask before acting",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "state",
+      "kind": "rect",
+      "x": 493.0,
+      "y": 320.0,
+      "w": 215.0,
+      "h": 100.0,
+      "text": "Session state\nplan · todos · checkpoints",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "model",
+      "kind": "rect",
+      "x": 830.0,
+      "y": 250.0,
+      "w": 145.0,
+      "h": 100.0,
+      "text": "Model\n(LLM)",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c_you",
+      "from": "you",
+      "to": "harness",
+      "route": "straight",
+      "label": "prompt",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c_req",
+      "from": "harness",
+      "to": "model",
+      "from_side": "top",
+      "to_side": "top",
+      "label": "context + tool list",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c_rep",
+      "from": "model",
+      "to": "harness",
+      "from_side": "bottom",
+      "to_side": "bottom",
+      "label": "reply or tool call",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "takeaway",
+      "x": 40.0,
+      "y": 548.0,
+      "text": "Swap the model and the loop stays the same. The harness decides what the model sees and what it's allowed to do.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="c_you"><path d="M150 300L236 300" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M245 300L235 304L235 296Z" fill="#6b6a66"/><rect x="166.9" y="289.75" width="52.2" height="20.5" rx="2" fill="#ffffff"/><text x="193" y="305.25" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="193" dy="0">prompt</tspan></text></g>
+<g id="c_req"><path d="M485 150L485 134L902.5 134L902.5 241" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M902.5 250L898.5 240L906.5 240Z" fill="#6b6a66"/><rect x="681.88" y="123.75" width="114.74" height="20.5" rx="2" fill="#ffffff"/><text x="739.25" y="139.25" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="739.25" dy="0">context + tool list</tspan></text></g>
+<g id="c_rep"><path d="M902.5 350L902.5 466L485 466L485 459" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M485 450L489 460L481 460Z" fill="#6b6a66"/><rect x="694.84" y="455.75" width="106.83" height="20.5" rx="2" fill="#ffffff"/><text x="748.25" y="471.25" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="748.25" dy="0">reply or tool call</tspan></text></g>
+<g id="title"><text x="259.41" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="259.41" dy="0">Model vs. harness: the agent loop</tspan></text></g>
+<g id="subtitle"><text x="334.38" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="334.38" dy="0">The model only predicts the next step. The harness around it does everything else.</tspan></text></g>
+<g id="you"><path d="M70 260H110A40 40 0 0 1 150 300V300A40 40 0 0 1 110 340H70A40 40 0 0 1 30 300V300A40 40 0 0 1 70 260Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="90" y="307.5" font-family="IBM Plex Sans" font-size="20" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="90" dy="0">You</tspan></text></g>
+<g id="harness"><path d="M257 150H713A12 12 0 0 1 725 162V438A12 12 0 0 1 713 450H257A12 12 0 0 1 245 438V162A12 12 0 0 1 257 150Z" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/></g>
+<g id="hlabel"><text x="328.85" y="180" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="328.85" dy="0">Copilot harness</tspan></text></g>
+<g id="ctx"><path d="M262 200H477V300H262Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="369.5" y="246.25" font-family="IBM Plex Sans" font-size="15" fill="#10386b" text-anchor="middle"><tspan x="369.5" dy="0">Context assembly</tspan><tspan x="369.5" dy="18.75">instructions · files · history</tspan></text></g>
+<g id="tools"><path d="M493 200H708V300H493Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="600.5" y="246.25" font-family="IBM Plex Sans" font-size="15" fill="#10386b" text-anchor="middle"><tspan x="600.5" dy="0">Tools</tspan><tspan x="600.5" dy="18.75">read · edit · run · search</tspan></text></g>
+<g id="appr"><path d="M262 320H477V420H262Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="369.5" y="366.25" font-family="IBM Plex Sans" font-size="15" fill="#10386b" text-anchor="middle"><tspan x="369.5" dy="0">Approvals</tspan><tspan x="369.5" dy="18.75">ask before acting</tspan></text></g>
+<g id="state"><path d="M493 320H708V420H493Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="600.5" y="366.25" font-family="IBM Plex Sans" font-size="15" fill="#10386b" text-anchor="middle"><tspan x="600.5" dy="0">Session state</tspan><tspan x="600.5" dy="18.75">plan · todos · checkpoints</tspan></text></g>
+<g id="model"><path d="M830 250H975V350H830Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="902.5" y="295.5" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="902.5" dy="0">Model</tspan><tspan x="902.5" dy="22.5">(LLM)</tspan></text></g>
+<g id="takeaway"><text x="446.46" y="564" font-family="IBM Plex Sans" font-size="16" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="446.46" dy="0">Swap the model and the loop stays the same. The harness decides what the model sees and what it's allowed to do.</tspan></text></g>
+</g>
+</svg>

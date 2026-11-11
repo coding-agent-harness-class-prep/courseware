@@ -1,0 +1,337 @@
+/* @theme courseware
+ *
+ * Professional slide theme for "GitHub Copilot as a Coding-Agent Harness".
+ * Authored for Marp (see ../utils/README.md). The Markdown decks in ../md are
+ * preprocessed (preprocess.mjs) into Marp-ready slides that this theme styles.
+ *
+ * Design goals:
+ *   - Clean, professional, education-friendly look with a consistent rhythm
+ *     (dark title + section-divider slides, light content slides).
+ *   - Code AND terminal blocks: smaller monospace text inside a bordered box.
+ *   - Generous but compact spacing so slide content fits on one slide.
+ *
+ * Palette: slate neutrals + a blue accent.
+ *   ink        #0f172a   headings / body ink
+ *   body       #1f2937   body text
+ *   muted      #475569   secondary text
+ *   accent     #2563eb   primary accent (blue-600)
+ *   accent-dk  #1d4ed8
+ *   line       #cbd5e1   hairlines / code borders
+ *   code-bg    #f8fafc   code surface (light)
+ *   term-bg    #0f172a   terminal surface (dark)
+ */
+
+@import 'default';
+
+:root {
+  --ink: #0f172a;
+  --body: #1f2937;
+  --muted: #475569;
+  --accent: #2563eb;
+  --accent-dk: #1d4ed8;
+  --line: #cbd5e1;
+  --code-bg: #f8fafc;
+  --code-ink: #0f172a;
+  --term-bg: #0f172a;
+  --term-ink: #e2e8f0;
+
+  --font-sans: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+  --font-mono: "Fira Code", "DejaVu Sans Mono", "Liberation Mono", monospace;
+}
+
+/* Render code literally: disable Fira Code ligatures so code operators
+   like =>, ===, !== and ?? show as typed instead of merged glyphs. This is a
+   teaching deck — students must see the real characters. */
+section code,
+section pre,
+section pre code {
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+}
+
+/* ---------- Base content slide ---------------------------------------- */
+
+section {
+  font-family: var(--font-sans);
+  font-size: 24px;
+  line-height: 1.4;
+  color: var(--body);
+  background: #ffffff;
+  padding: 52px 72px 60px;
+  /* Top-align content (Marp's default theme centers it vertically). */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* Slide title (## in the source) */
+section h2 {
+  font-size: 40px;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 26px;
+  padding-bottom: 14px;
+  border-bottom: 3px solid var(--accent);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+section h3 {
+  font-size: 27px;
+  color: var(--ink);
+  margin: 18px 0 8px;
+  font-weight: 700;
+}
+
+/* ---------- Lists ------------------------------------------------------ */
+
+section ul,
+section ol {
+  margin: 6px 0;
+  padding-left: 4px;
+}
+
+section li {
+  font-size: 26px;
+  line-height: 1.42;
+  margin: 0 0 10px;
+  padding-left: 30px;
+  list-style: none;
+  position: relative;
+}
+
+section ul > li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.62em;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+/* Nested bullets: lighter, smaller marker */
+section li li {
+  font-size: 23px;
+  margin-bottom: 6px;
+}
+section li li::before {
+  top: 0.66em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+/* Ordered lists keep numbers */
+section ol > li {
+  padding-left: 8px;
+  list-style: decimal;
+}
+section ol > li::before {
+  content: none;
+}
+section ol {
+  padding-left: 34px;
+}
+
+section p {
+  font-size: 26px;
+  margin: 8px 0;
+}
+
+section strong { color: var(--ink); font-weight: 700; }
+section em { color: var(--muted); }
+
+/* ---------- Inline code ------------------------------------------------ */
+
+section :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: #eef2ff;
+  color: var(--accent-dk);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid #e0e7ff;
+}
+
+/* ---------- Code & terminal blocks (bordered, smaller monospace) ------- */
+
+section pre {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 1.5;
+  background: var(--code-bg);
+  color: var(--code-ink);
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 14px 0;
+  overflow: hidden;            /* never spill past the box edges */
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+section pre code {
+  font-family: var(--font-mono);
+  font-size: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+}
+
+/* Terminal-flavored blocks: shell / console fences render dark.
+ * Marp tags the <code> with a language- class from the fence info string. */
+section pre:has(code.language-bash),
+section pre:has(code.language-sh),
+section pre:has(code.language-shell),
+section pre:has(code.language-console),
+section pre:has(code.language-powershell),
+section pre:has(code.language-ps1) {
+  background: var(--term-bg);
+  color: var(--term-ink);
+  border-color: #1e293b;
+  border-left-color: #38bdf8;
+}
+section pre:has(code.language-bash) code,
+section pre:has(code.language-sh) code,
+section pre:has(code.language-shell) code,
+section pre:has(code.language-console) code,
+section pre:has(code.language-powershell) code,
+section pre:has(code.language-ps1) code {
+  color: var(--term-ink);
+}
+
+/* ---------- Diagrams --------------------------------------------------- */
+
+/* A diagram slide is a heading plus one image. `section` is a stretch flex
+   column, so without an explicit cap the image is stretched to the full content
+   width and runs off the bottom of the slide — silently, the way Marp clips
+   everything. The frame is 1280x720; padding (52 top / 60 bottom) and the h2
+   rule take ~220px, so 470px is the real body budget. Diagrams are US Legal
+   landscape (1.65:1), so 470px tall renders ~775px wide and fits the 1136px
+   content width with room to spare. */
+section img {
+  display: block;
+  margin: 10px auto 0;
+  max-width: 100%;
+  max-height: 470px;
+  object-fit: contain;
+}
+
+/* ---------- Tables ----------------------------------------------------- */
+
+section table {
+  font-size: 22px;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+section th {
+  background: var(--ink);
+  color: #fff;
+  text-align: left;
+  padding: 8px 14px;
+}
+section td {
+  border-bottom: 1px solid var(--line);
+  padding: 8px 14px;
+}
+
+/* ---------- Footer & pagination --------------------------------------- */
+
+section footer {
+  color: var(--muted);
+  font-size: 15px;
+  left: 72px;
+  bottom: 22px;
+}
+section::after {
+  color: var(--muted);
+  font-size: 15px;
+  right: 40px;
+  bottom: 22px;
+}
+
+/* Accent hairline along the top of every content slide */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--accent) 0%, #38bdf8 100%);
+}
+
+/* ===================================================================== */
+/*  Title slide (front matter)                                            */
+/* ===================================================================== */
+
+section.title {
+  background: radial-gradient(120% 120% at 15% 10%, #1e293b 0%, #0f172a 55%, #020617 100%);
+  color: #f8fafc;
+  justify-content: center;
+  padding: 72px 80px;
+}
+section.title::before {
+  height: 10px;
+}
+section.title h1 {
+  font-size: 62px;
+  line-height: 1.08;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 18px;
+  letter-spacing: -0.02em;
+}
+section.title h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #93c5fd;
+  border: none;
+  padding: 0;
+  margin: 0 0 42px;
+}
+section.title p {
+  font-size: 22px;
+  color: #cbd5e1;
+  margin: 0;
+}
+section.title footer,
+section.title::after { display: none; }
+
+/* ===================================================================== */
+/*  Section-divider slide (# in the source)                              */
+/* ===================================================================== */
+
+section.section {
+  background: linear-gradient(115deg, #1e293b 0%, #0f172a 100%);
+  color: #f8fafc;
+  justify-content: center;
+  padding: 72px 80px;
+}
+section.section::before {
+  height: 10px;
+}
+section.section h1 {
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+section.section h1::after {
+  content: "";
+  display: block;
+  width: 96px;
+  height: 5px;
+  margin-top: 22px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent) 0%, #38bdf8 100%);
+}
+section.section footer,
+section.section::after { display: none; }

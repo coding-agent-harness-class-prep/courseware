@@ -1,0 +1,33 @@
+.DS_Store
+node_modules
+
+# NOTE: lockfiles are deliberately NOT ignored. The validations harness commits its
+# package-lock.json, and each .NET sample commits its packages.lock.json, so every
+# machine restores the identical tree.
+
+# .NET build output (samples, and any copy built in place)
+bin/
+obj/
+.vs/
+TestResults/
+*.user
+
+# Maven build output
+target/
+
+# IDE folders that sample copies pick up
+.idea/
+*.iml
+
+# Vitest output from courseware/validations
+test-results/
+
+# The customer's webinar sheet stays local: the repository is published
+courseware/outline/*.docx
+
+# LibreOffice temp files
+.~lock.*
+lu*.tmp
+
+# QA slide thumbnails
+slide-*.jpg

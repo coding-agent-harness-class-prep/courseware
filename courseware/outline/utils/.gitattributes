@@ -1,0 +1,7 @@
+# These files are copied into / executed inside a Linux container and MUST use
+# LF line endings, even when checked out on Windows. CRLF would break the
+# shebang and the sed/node invocations.
+entrypoint.sh   text eol=lf
+build.mjs       text eol=lf
+convert.sh      text eol=lf
+Containerfile   text eol=lf

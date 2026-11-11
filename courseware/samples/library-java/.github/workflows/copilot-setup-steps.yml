@@ -1,0 +1,32 @@
+# Prepares the GitHub Actions environment that the Copilot cloud agent works in, so the
+# JDK, Maven, and every dependency are ready before the agent starts on a task.
+# The job must be named `copilot-setup-steps`. Run it from the Actions tab to check it works.
+name: Copilot Setup Steps
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      # Downloads Maven itself (through the wrapper), the plugins, and the dependencies.
+      - name: Warm the Maven cache
+        run: sh ./mvnw -B -q -DskipTests verify

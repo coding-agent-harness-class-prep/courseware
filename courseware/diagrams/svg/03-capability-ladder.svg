@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="b82af9fcfadd5a35"><![CDATA[
+{
+  "version": 1,
+  "title": "The capability ladder",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 40.0,
+      "y": 24.0,
+      "text": "The capability ladder",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#1a1a1a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "subtitle",
+      "x": 40.0,
+      "y": 66.0,
+      "text": "Each rung hands the agent more of the work, and moves it further from your keyboard.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "chat",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 400.0,
+      "w": 210.0,
+      "h": 120.0,
+      "text": "Chat\nin VS Code\nexplains and suggests;\nyou apply the change",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "agent",
+      "kind": "rect",
+      "x": 270.0,
+      "y": 320.0,
+      "w": 210.0,
+      "h": 120.0,
+      "text": "Agent mode\nin VS Code\nedits, runs, and tests,\nasking before it acts",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cli",
+      "kind": "rect",
+      "x": 500.0,
+      "y": 240.0,
+      "w": 210.0,
+      "h": 120.0,
+      "text": "Copilot CLI\nin your terminal\nthe same loop, and\nscriptable for CI",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cloud",
+      "kind": "rect",
+      "x": 730.0,
+      "y": 160.0,
+      "w": 240.0,
+      "h": 120.0,
+      "text": "Copilot cloud agent\non GitHub, not your machine\nworks unattended and\nreturns a pull request",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "c1",
+      "from": "chat",
+      "to": "agent",
+      "from_side": "top",
+      "to_side": "left"
+    },
+    {
+      "type": "connector",
+      "id": "c2",
+      "from": "agent",
+      "to": "cli",
+      "from_side": "top",
+      "to_side": "left"
+    },
+    {
+      "type": "connector",
+      "id": "c3",
+      "from": "cli",
+      "to": "cloud",
+      "from_side": "top",
+      "to_side": "left"
+    },
+    {
+      "type": "shape",
+      "id": "ax0",
+      "kind": "rect",
+      "x": 40.0,
+      "y": 552.0,
+      "w": 2.0,
+      "h": 2.0,
+      "text": "",
+      "style": {
+        "fill": "none",
+        "stroke": "none",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ax1",
+      "kind": "rect",
+      "x": 958.0,
+      "y": 552.0,
+      "w": 2.0,
+      "h": 2.0,
+      "text": "",
+      "style": {
+        "fill": "none",
+        "stroke": "none",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "axis",
+      "from": "ax0",
+      "to": "ax1",
+      "route": "straight",
+      "label": "autonomy rises: you approve less often and review more at the end",
+      "style": {
+        "fill": null,
+        "stroke": "#6b6a66",
+        "stroke_width": 2.0,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="c1"><path d="M145 400L145 380L261 380" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M270 380L260 384L260 376Z" fill="#6b6a66"/></g>
+<g id="c2"><path d="M375 320L375 300L491 300" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M500 300L490 304L490 296Z" fill="#6b6a66"/></g>
+<g id="c3"><path d="M605 240L605 220L721 220" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M730 220L720 224L720 216Z" fill="#6b6a66"/></g>
+<g id="axis"><path d="M42 553L946 553" fill="none" stroke="#6b6a66" stroke-width="2"/><path d="M958 553L944.67 558.33L944.67 547.67Z" fill="#6b6a66"/><rect x="266.33" y="542.13" width="455.34" height="21.75" rx="2" fill="#ffffff"/><text x="494" y="558.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="494" dy="0">autonomy rises: you approve less often and review more at the end</tspan></text></g>
+<g id="title"><text x="179.03" y="52" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="179.03" dy="0">The capability ladder</tspan></text></g>
+<g id="subtitle"><text x="348.33" y="82" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="348.33" dy="0">Each rung hands the agent more of the work, and moves it further from your keyboard.</tspan></text></g>
+<g id="chat"><path d="M40 400H250V520H40Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="145" y="436" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="145" dy="0">Chat</tspan><tspan x="145" dy="20">in VS Code</tspan><tspan x="145" dy="20">explains and suggests;</tspan><tspan x="145" dy="20">you apply the change</tspan></text></g>
+<g id="agent"><path d="M270 320H480V440H270Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="375" y="356" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="375" dy="0">Agent mode</tspan><tspan x="375" dy="20">in VS Code</tspan><tspan x="375" dy="20">edits, runs, and tests,</tspan><tspan x="375" dy="20">asking before it acts</tspan></text></g>
+<g id="cli"><path d="M500 240H710V360H500Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="605" y="276" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="605" dy="0">Copilot CLI</tspan><tspan x="605" dy="20">in your terminal</tspan><tspan x="605" dy="20">the same loop, and</tspan><tspan x="605" dy="20">scriptable for CI</tspan></text></g>
+<g id="cloud"><path d="M730 160H970V280H730Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="850" y="196" font-family="IBM Plex Sans" font-size="16" fill="#7a2f0f" text-anchor="middle"><tspan x="850" dy="0">Copilot cloud agent</tspan><tspan x="850" dy="20">on GitHub, not your machine</tspan><tspan x="850" dy="20">works unattended and</tspan><tspan x="850" dy="20">returns a pull request</tspan></text></g>
+<g id="ax0"><path d="M40 552H42V554H40Z" fill="none" stroke="none" stroke-width="1.5"/></g>
+<g id="ax1"><path d="M958 552H960V554H958Z" fill="none" stroke="none" stroke-width="1.5"/></g>
+</g>
+</svg>
